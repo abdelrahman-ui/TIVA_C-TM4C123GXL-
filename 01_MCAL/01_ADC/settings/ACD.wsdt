@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>ADC/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>807</ColumnWidth1><ColumnWidth2>215</ColumnWidth2><ColumnWidth3>53</ColumnWidth3></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>221</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1077</ColumnWidth1></Debug-Log>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-20069-23865</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-30065-24087</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>1</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-30817-23869</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>ADC</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>12</YPos2><SelStart2>243</SelStart2><SelEnd2>259</SelEnd2></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\TM4C123GH6PM.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>36</YPos2><SelStart2>4445</SelStart2><SelEnd2>4445</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-04FF0DA0><key>iaridepm.enu1</key></Toolbar-04FF0DA0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>212</Bottom><Right>295</Right><x>-2</x><y>-2</y><xscreen>297</xscreen><yscreen>138</yscreen><sizeHorzCX>261444</sizeHorzCX><sizeHorzCY>258427</sizeHorzCY><sizeVertCX>261444</sizeVertCX><sizeVertCY>400749</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>277</Bottom><Right>1138</Right><x>-2</x><y>-2</y><xscreen>1140</xscreen><yscreen>279</yscreen><sizeHorzCX>1003521</sizeHorzCX><sizeHorzCY>522472</sizeHorzCY><sizeVertCX>261444</sizeVertCX><sizeVertCY>258427</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

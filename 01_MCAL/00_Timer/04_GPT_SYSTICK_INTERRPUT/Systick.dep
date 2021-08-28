@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>878066671</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\TM4C123GH6PM.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\Debug\Exe\Systick.out</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmSimd.h</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\Systick.pbd</file>
+      <file>$PROJ_DIR$\cstartup_M.c</file>
+      <file>$PROJ_DIR$\Debug\List\Systick.map</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cm4.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\cstartup_M.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmFunc.h</file>
+      <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\cstartup_M.o</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmInstr.h</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 2 9</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\Systick.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 26 1 17 12 22 24</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 1</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 15</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10 20 4 19 29 8 13 18 25 3 16 0 11 23 27 14</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 0 13 18 10 3 11 16 19 23 27 29 20 14 25 4 8</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\cstartup_M.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 28</file>
+        </tool>
+      </outputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

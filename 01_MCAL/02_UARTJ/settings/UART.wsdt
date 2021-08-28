@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>UART/Debug</Project><Project>MUART/Debug</Project></CurrentConfigs><CurrentProj>MUART</CurrentProj><OverviewSelected>0</OverviewSelected></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>807</ColumnWidth1><ColumnWidth2>215</ColumnWidth2><ColumnWidth3>53</ColumnWidth3></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>221</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1077</ColumnWidth1></Debug-Log>
+    <TerminalIO/></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-11211-28847</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-23298-29030</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>1</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-21959-28851</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>MUART</ExpandedNode><ExpandedNode>UART</ExpandedNode><ExpandedNode>UART/Output</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\UART_interface.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>9</YPos2><SelStart2>1551</SelStart2><SelEnd2>1551</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\UART_confid.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>17</YPos2><SelStart2>883</SelStart2><SelEnd2>883</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\UART_programe.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\STD_TYPES.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>2</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\BIT_MATH.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>703</SelStart2><SelEnd2>703</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>6</YPos2><SelStart2>741</SelStart2><SelEnd2>741</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\TM4C123GH6PM.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>263</YPos2><SelStart2>22614</SelStart2><SelEnd2>25429</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\UART_private.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>33</YPos2><SelStart2>943</SelStart2><SelEnd2>966</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\02_MUART\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>5</SelStart2><SelEnd2>5</SelEnd2></Tab><ActiveTab>8</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-054FD598><key>iaridepm.enu1</key></Toolbar-054FD598></Sizes></Row0></Top><Left><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>434</Bottom><Right>295</Right><x>-2</x><y>-2</y><xscreen>297</xscreen><yscreen>139</yscreen><sizeHorzCX>261444</sizeHorzCX><sizeHorzCY>260300</sizeHorzCY><sizeVertCX>261444</sizeVertCX><sizeVertCY>816479</sizeVertCY></Rect></Wnd3></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>55</Bottom><Right>1138</Right><x>-2</x><y>-2</y><xscreen>1140</xscreen><yscreen>57</yscreen><sizeHorzCX>1003521</sizeHorzCX><sizeHorzCY>106742</sizeHorzCY><sizeVertCX>261444</sizeVertCX><sizeVertCY>260300</sizeVertCY></Rect></Wnd2></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

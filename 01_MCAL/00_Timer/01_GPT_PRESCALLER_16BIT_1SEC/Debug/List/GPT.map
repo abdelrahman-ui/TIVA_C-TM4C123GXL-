@@ -1,0 +1,161 @@
+###############################################################################
+#
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                31/Jul/2021  06:55:54
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\14_S14_Tiva_Timer\GPT\Debug\Exe\GPT.out
+#    Map file     =  
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\14_S14_Tiva_Timer\GPT\Debug\List\GPT.map
+#    Command line =  
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\14_S14_Tiva_Timer\GPT\Debug\Obj\cstartup_M.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\14_S14_Tiva_Timer\GPT\Debug\Obj\main.o
+#        -o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\14_S14_Tiva_Timer\GPT\Debug\Exe\GPT.out
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\14_S14_Tiva_Timer\GPT\Debug\List\GPT.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20007fff] { rw, block CSTACK, block HEAP };
+
+  Section   Kind        Address    Size  Object
+  -------   ----        -------    ----  ------
+"A0":                              0x90
+  .intvec   const    0x00000000    0x90  cstartup_M.o [1]
+                   - 0x00000090    0x90
+
+"P1":                             0x168
+  .text     ro code  0x00000090    0xe4  main.o [1]
+  .text     ro code  0x00000174    0x22  fpinit_M.o [4]
+  .text     ro code  0x00000196     0x2  cstartup_M.o [1]
+  .text     ro code  0x00000198    0x1a  cmain.o [5]
+  .text     ro code  0x000001b2     0x4  low_level_init.o [3]
+  .text     ro code  0x000001b6     0x4  exit.o [3]
+  .text     ro code  0x000001ba     0x2  cstartup_M.o [1]
+  .text     ro code  0x000001bc     0xa  cexit.o [5]
+  .text     ro code  0x000001c6     0x2  cstartup_M.o [1]
+  .text     ro code  0x000001c8    0x14  exit.o [6]
+  .text     ro code  0x000001dc    0x10  cstartup_M.o [1]
+  .text     ro code  0x000001ec     0x2  cstartup_M.o [1]
+  .text     ro code  0x000001ee     0x2  cstartup_M.o [1]
+  .text     ro code  0x000001f0     0x2  cstartup_M.o [1]
+  .text     ro code  0x000001f2     0x2  cstartup_M.o [1]
+  .text     ro code  0x000001f4     0x2  cstartup_M.o [1]
+  .text     ro code  0x000001f6     0x2  cstartup_M.o [1]
+                   - 0x000001f8   0x168
+
+"P2":                            0x1000
+  CSTACK             0x20000000  0x1000  <Block>
+    CSTACK  uninit   0x20000000  0x1000  <Block tail>
+                   - 0x20001000  0x1000
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\14_S14_Tiva_Timer\GPT\Debug\Obj: [1]
+    cstartup_M.o           34      144
+    main.o                228
+    -------------------------------------------
+    Total:                262      144
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+m7M_tls.a: [4]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [5]
+    cexit.o                10
+    cmain.o                26
+    -------------------------------------------
+    Total:                 36
+
+shb_l.a: [6]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Linker created                        4 096
+-----------------------------------------------
+    Grand Total:          360      144    4 096
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address  Size  Type      Object
+-----                    -------  ----  ----      ------
+?main                 0x00000199        Code  Gb  cmain.o [5]
+BusFault_Handler      0x000001ed   0x2  Code  Wk  cstartup_M.o [1]
+CSTACK$$Base          0x20000000         --   Gb  - Linker created -
+CSTACK$$Limit         0x20001000         --   Gb  - Linker created -
+DebugMon_Handler      0x000001f3   0x2  Code  Wk  cstartup_M.o [1]
+HardFault_Handler     0x000001bb   0x2  Code  Wk  cstartup_M.o [1]
+MemManage_Handler     0x000001c7   0x2  Code  Wk  cstartup_M.o [1]
+NMI_Handler           0x00000197   0x2  Code  Wk  cstartup_M.o [1]
+PendSV_Handler        0x000001f5   0x2  Code  Wk  cstartup_M.o [1]
+Region$$Table$$Base   0x00000000         --   Gb  - Linker created -
+Region$$Table$$Limit  0x00000000         --   Gb  - Linker created -
+SVC_Handler           0x000001f1   0x2  Code  Wk  cstartup_M.o [1]
+SysTick_Handler       0x000001f7   0x2  Code  Wk  cstartup_M.o [1]
+UsageFault_Handler    0x000001ef   0x2  Code  Wk  cstartup_M.o [1]
+__cmain               0x00000199        Code  Gb  cmain.o [5]
+__exit                0x000001c9  0x14  Code  Gb  exit.o [6]
+__iar_init_vfp        0x00000175        Code  Gb  fpinit_M.o [4]
+__iar_program_start   0x000001dd  0x10  Code  Gb  cstartup_M.o [1]
+__low_level_init      0x000001b3   0x4  Code  Gb  low_level_init.o [3]
+__vector_table        0x00000000  0x90  Data  Gb  cstartup_M.o [1]
+_call_main            0x000001a5        Code  Gb  cmain.o [5]
+_exit                 0x000001bd        Code  Gb  cexit.o [5]
+_main                 0x000001af        Code  Gb  cmain.o [5]
+exit                  0x000001b7   0x4  Code  Gb  exit.o [3]
+main                  0x00000091  0x94  Code  Gb  main.o [1]
+mina                  0x00000125  0x1a  Code  Gb  main.o [1]
+
+
+[1] = H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\14_S14_Tiva_Timer\GPT\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+    360 bytes of readonly  code memory
+    144 bytes of readonly  data memory
+  4 096 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

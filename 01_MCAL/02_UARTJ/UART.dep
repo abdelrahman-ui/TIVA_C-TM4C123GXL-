@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>797670064</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\BIT_MATH.h</file>
+      <file>$PROJ_DIR$\UART_interface.h</file>
+      <file>$PROJ_DIR$\UART_private.h</file>
+      <file>$PROJ_DIR$\UART_programe.c</file>
+      <file>$PROJ_DIR$\TM4C123GH6PM.h</file>
+      <file>$PROJ_DIR$\STD_TYPES.h</file>
+      <file>$PROJ_DIR$\Debug\List\UART.map</file>
+      <file>$PROJ_DIR$\Debug\Obj\UART.pbd</file>
+      <file>$PROJ_DIR$\Debug\Exe\UART.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\UART_programe.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\UART_programe.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\UART_confid.h</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+      <file>$TOOLKIT_DIR$\config\generic_cortex.icf</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 9 7</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\UART_programe.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 10</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\UART.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 7</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 18 14 10 19 16 12 17</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
