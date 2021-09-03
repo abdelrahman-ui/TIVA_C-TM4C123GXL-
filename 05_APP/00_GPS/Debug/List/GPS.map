@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.70.1.11437/W32 for ARM                26/Aug/2021  22:41:27
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                02/Sep/2021  04:06:42
 # Copyright 2007-2016 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,10 @@
 #    Map file     =  
 #        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\05_APP\00_GPS\Debug\List\GPS.map
 #    Command line =  
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\05_APP\00_GPS\Debug\Obj\GPIO_programe.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\05_APP\00_GPS\Debug\Obj\LCD_programe.o
 #        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\05_APP\00_GPS\Debug\Obj\main.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\05_APP\00_GPS\Debug\Obj\UART_programe.o
 #        -o
 #        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\05_APP\00_GPS\Debug\Exe\GPS.out
 #        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map

@@ -2,6 +2,9 @@
 
 <workspace>
   <project>
+    <path>$WS_DIR$\..\..\01_MCAL\01_GPIO\GPIO.ewp</path>
+  </project>
+  <project>
     <path>$WS_DIR$\GPS.ewp</path>
   </project>
   <batchBuild/>

@@ -1,10 +1,14 @@
- /******************************************************************/
+/****************************************************************
+ ************  - BIT_MATH.h                    ******************
+ ***********   - Created: 2/9/2021			   ******************
+ ***********   - Author: Abdelrahman_Magdy      ******************
+ ***********   - Version : _1_				   ******************
+ ***********								   ******************
+ ****************************************************************/
 
- /* Author  : Abdelrahman Magdy */
- /* Data    : 25 JAN 2021       */
- /* Version : V01               */
-
- /*****************************************************************/
+/****************************************************************
+***********  guard of file will call on time in .c  *************
+******************************************************************/
 
 
 
@@ -12,11 +16,11 @@
  #define BIT_MATH_H_
 
 
- #define SET_BIT(REG , BITNUM) REG |= 1U<<BITNUM
- #define CLR_BIT(REG , BITNUM) REG &= ~(1U<<BITNUM)
- #define TOG_BIT(REG , BITNUM) REG ^= 1U<<BITNUM
- #define GET_BIT(REG , BITNUM) ( (REG >> BITNUM) & 1U )
-
+ #define SET_BIT(x, pos) (x |= (1U << pos))
+ #define CLEAR_BIT(x, pos) (x &= (~(1U<< pos)))
+ #define TOGGLE_BIT(x, pos) x ^= (1U<< pos)
+ #define CHECK_BIT(x, pos) (x & (1UL << pos) )
+ #define SWAP_NIBBLES(x) ((x & 0x0F)<<4 | (x & 0xF0)>>4)
 
 
  #endif /* BIT_MATH_H_ */
