@@ -21,11 +21,20 @@
 		 */
 		
 	#ifndef		FALSE
-	#define		FALSE   (0U)
+	#define		FALSE (0U)
 	#endif
 	
+    #ifndef		HIGH
+	#define		HIGH  (1U)
+	#endif
+	
+    #ifndef     LOW
+	#define		LOW   (0U)
+	#endif
+	
+
 	#ifndef		TRUE
-	#define		TRUE    (1U)
+	#define		TRUE  (1U)
 	#endif
 	
 	

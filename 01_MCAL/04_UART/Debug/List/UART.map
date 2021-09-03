@@ -1,0 +1,138 @@
+###############################################################################
+#
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                03/Sep/2021  06:53:15
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\01_MCAL\04_UART\Debug\Exe\UART.out
+#    Map file     =  
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\01_MCAL\04_UART\Debug\List\UART.map
+#    Command line =  
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\01_MCAL\04_UART\Debug\Obj\main.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\01_MCAL\04_UART\Debug\Obj\UART_programe.o
+#        -o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\01_MCAL\04_UART\Debug\Exe\UART.out
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\01_MCAL\04_UART\Debug\List\UART.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\CONFIG\generic_cortex.icf" --semihosting --entry
+#        __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0007ffff] { ro };
+"P3":  place in [from 0x00000000 to 0x00000000] |
+                [from 0x20000000 to 0x2000ffff] {
+          rw, block CSTACK, block PROC_STACK, block HEAP };
+
+  Section   Kind        Address   Size  Object
+  -------   ----        -------   ----  ------
+"A0":                             0x40
+  .intvec   ro code  0x00000000   0x40  vector_table_M.o [4]
+                   - 0x00000040   0x40
+
+"P1":                             0x54
+  .text     ro code  0x00000040   0x1a  cmain.o [4]
+  .text     ro code  0x0000005a    0x4  low_level_init.o [3]
+  .text     ro code  0x0000005e    0x4  main.o [1]
+  .text     ro code  0x00000062    0x4  exit.o [3]
+  .text     ro code  0x00000066    0x2  vector_table_M.o [4]
+  .text     ro code  0x00000068    0xa  cexit.o [4]
+  .text     ro code  0x00000074   0x14  exit.o [5]
+  .text     ro code  0x00000088    0xc  cstartup_M.o [4]
+                   - 0x00000094   0x54
+
+"P3":                            0x400
+  CSTACK             0x20000000  0x400  <Block>
+    CSTACK  uninit   0x20000000  0x400  <Block tail>
+                   - 0x20000400  0x400
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  rw data
+    ------            -------  -------
+H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\01_MCAL\04_UART\Debug\Obj: [1]
+    main.o                  4
+    ----------------------------------
+    Total:                  4
+
+command line: [2]
+    ----------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    ----------------------------------
+    Total:                  8
+
+rt7M_tl.a: [4]
+    cexit.o                10
+    cmain.o                26
+    cstartup_M.o           12
+    vector_table_M.o       66
+    ----------------------------------
+    Total:                114
+
+shb_l.a: [5]
+    exit.o                 20
+    ----------------------------------
+    Total:                 20
+
+    Gaps                    2
+    Linker created               1 024
+--------------------------------------
+    Grand Total:          148    1 024
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address  Size  Type      Object
+-----                    -------  ----  ----      ------
+?main                 0x00000041        Code  Gb  cmain.o [4]
+CSTACK$$Base          0x20000000         --   Gb  - Linker created -
+CSTACK$$Limit         0x20000400         --   Gb  - Linker created -
+Region$$Table$$Base   0x00000000         --   Gb  - Linker created -
+Region$$Table$$Limit  0x00000000         --   Gb  - Linker created -
+__cmain               0x00000041        Code  Gb  cmain.o [4]
+__exit                0x00000075  0x14  Code  Gb  exit.o [5]
+__iar_program_start   0x00000089        Code  Gb  cstartup_M.o [4]
+__low_level_init      0x0000005b   0x4  Code  Gb  low_level_init.o [3]
+__vector_table        0x00000000        Data  Gb  vector_table_M.o [4]
+_call_main            0x0000004d        Code  Gb  cmain.o [4]
+_exit                 0x00000069        Code  Gb  cexit.o [4]
+_main                 0x00000057        Code  Gb  cmain.o [4]
+exit                  0x00000063   0x4  Code  Gb  exit.o [3]
+main                  0x0000005f   0x4  Code  Gb  main.o [1]
+
+
+[1] = H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\01_MCAL\04_UART\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+    148 bytes of readonly  code memory
+  1 024 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
