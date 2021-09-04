@@ -1,27 +1,27 @@
-/***************************************************************************************
- ***************************  - GPIO_private.h		     ***************************
-***************************   - Created: 9/2/2021	     ***************************
-***************************   - Author: Abdelrahman_Magdy    ***************************
-***************************   - Version : _1_		     ***************************
-***************************   - Note :
+/*======================================================================================
+===========================   - GPIO_private.h		     ============================
+===========================   - Created: 9/2/2021	     ============================
+===========================   - Author: Abdelrahman_Magdy    ============================
+===========================   - Version : _1_		     ============================
+===========================   - Note :
 					      *-
 					      *-
- **************************************************************************************/ 
+ ======================================================================================*/ 
 
-/**************************************************************************************
+/*======================================================================================
 
-*	  - Developer can't Edit in it    
-*	  - Register _ Defination		
-*	  - Design : 
-					- #define	:	NO
-					- Union		:	NO
-					- Struct	:	YES
+          *        Developer can't Edit in it    
+          *        Register _ Defination		
+          *        Design : 
+				- #define	:	NO
+				- Union		:	NO
+				- Struct	:	YES
 
-**************************************************************************************/
+======================================================================================*/
 
-/*************************************************************************************
-******************* guard of file will call on time in .c          *******************
-*************************************************************************************/ 
+/*======================================================================================
+=======================  guard of file will call on time in .c	========================
+========================================================================================*/
 
 #ifndef GPIO_PRIVATE_H
 #define GPIO_PRIVATE_H
@@ -36,7 +36,7 @@
   * Register map for GPIOA peripheral (GPIOA)
   */
 
-typedef struct {                                    /*!< GPIOA Structure                                                       */
+typedef struct {                                    /*!< GPIOA Structure                                                      */
   volatile u32  RESERVED0[255];
   volatile u32  DATA;                              /*!< GPIO Data                                                             */
   volatile u32  DIR;                               /*!< GPIO Direction                                                        */
@@ -58,7 +58,7 @@ typedef struct {                                    /*!< GPIOA Structure        
   volatile u32  SLR;                               /*!< GPIO Slew Rate Control Select                                         */
   volatile u32  DEN;                               /*!< GPIO Digital Enable                                                   */
   volatile u32  LOCK;                              /*!< GPIO Lock                                                             */
-  volatile u32t  CR;                                /*!< GPIO Commit                                                           */
+  volatile u32  CR;                                /*!< GPIO Commit                                                           */
   volatile u32  AMSEL;                             /*!< GPIO Analog Mode Select                                               */
   volatile u32  PCTL;                              /*!< GPIO Port Control                                                     */
   volatile u32  ADCCTL;                            /*!< GPIO ADC Control                                                      */
@@ -91,7 +91,6 @@ typedef struct {                                    /*!< GPIOA Structure        
 #define GPIOD                           ((GPIOA_Type              *) GPIOD_BASE)
 #define GPIOE                           ((GPIOA_Type              *) GPIOE_BASE)
 #define GPIOF                           ((GPIOA_Type              *) GPIOF_BASE)
-
 
 #endif //GPIO_PRIVATE_H
 
