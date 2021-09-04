@@ -56,7 +56,7 @@ void UART_voidWriteString(u8 const * string);
 void UART_voidWriteInt(u32 copy_u32Number);
 
   /* ========== Function To Read From Rx  ========== */
-u8 UART_Read(void);
+u8 UART_u8Read(void);
 
 
 

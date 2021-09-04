@@ -27,11 +27,4 @@
 
 #define LCD_PORT GPIOB
 
-#define RS					  0	/* Define Register Select pin */
-
-#define RW					  1	/* Define Register Select pin */
-
-#define EN					  2     /* Define Register Select pin */
-
-
 #endif //LCD_CONFIG_H

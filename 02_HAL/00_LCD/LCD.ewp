@@ -1920,29 +1920,41 @@
       <data/>
     </settings>
   </configuration>
-  <file>
-    <name>$PROJ_DIR$\BIT_MATH.h</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\LCD_config.h</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\LCD_interface.h</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\LCD_private.h</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\LCD_programe.c</name>
-  </file>
+  <group>
+    <name>Include</name>
+    <file>
+      <name>$PROJ_DIR$\BIT_MATH.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Delay_interface.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\LCD_config.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\LCD_interface.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\LCD_private.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\STD_TYPE.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\TM4C123GH6PM.h</name>
+    </file>
+  </group>
+  <group>
+    <name>Src</name>
+    <file>
+      <name>$PROJ_DIR$\Delay_Program.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\LCD_programe.c</name>
+    </file>
+  </group>
   <file>
     <name>$PROJ_DIR$\main.c</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\STD_TYPE.h</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\TM4C123GH6PM.h</name>
   </file>
 </project>
 

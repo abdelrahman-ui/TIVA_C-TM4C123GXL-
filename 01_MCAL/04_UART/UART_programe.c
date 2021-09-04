@@ -91,7 +91,7 @@ void UART_voidWriteInt(u32 copy_u32Number)
 /*
 
 */
-u8 UART_Read(void)
+u8 UART_u8Read(void)
 {
   
   

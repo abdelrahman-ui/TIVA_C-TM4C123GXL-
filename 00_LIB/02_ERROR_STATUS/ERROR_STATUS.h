@@ -1,6 +1,6 @@
 /*=======================================================================================
-===========================   - BIT_MATH.h                    ===========================
-===========================   - Created: 2/9/2021	      ===========================
+===========================   - ERROR_STATUS.h                    ===========================
+===========================   - Created: 9/4/2021	      ===========================
 ===========================   - Author: Abdelrahman_Magdy     ===========================
 ===========================   - Version : _1_		      ===========================
 ===========================				      ===========================
@@ -12,14 +12,19 @@
 
 
 
- #ifndef BIT_MATH_H_
- #define BIT_MATH_H_
+
+#ifndef ERROR_STATUS_H_
+#define ERROR_STATUS_H_
+
+typedef enum{
+
+	OK,
+	NOK,
+	OUT_OF_RANGE,
+	NULL_POINTER
+
+}ErrorStatus;
 
 
-#define SET_BIT(REG , BITNUM) REG |= 1U<<BITNUM
-#define CLR_BIT(REG , BITNUM) REG &= ~(1U<<BITNUM)
-#define TOG_BIT(REG , BITNUM) REG ^= 1U<<BITNUM
-#define GET_BIT(REG , BITNUM) ( (REG >> BITNUM) & 1U )
 
-
- #endif /* BIT_MATH_H_ */
+#endif /* ERROR_STATUS_H_ */

@@ -1,183 +1,228 @@
-/****************************************************************
- ************   -LCD_program.c                ******************
- ***********   -Created: 2/9/2021	      ******************
- ***********   -Author: Abdelrahman_Magdy     ******************
- ***********   -Version : _1_		      ******************
- ***********  -				      ******************
- ****************************************************************/ 
-#include "STD_TYPE.h"
-#include "BIT_MATH.h"
+/*========================================================================================
+===========================   - LCD_program.c		     =============================
+===========================   - Created: 9/4/2021	     =============================
+===========================   - Author: Abdelrahman_Magdy    =============================
+===========================   - Version : _1_		     =============================
+===========================   - Note :
+					*-
+					*-
+========================================================================================*/ 
 
 
-#include "LCD_interface.h"
-#include "LCD_private.h"
-#include "LCD_config.h"
-
-#include "TM4C123GH6PM.h"
-
- 
- /*********************************************************** Start_FUNCTION  ***********************************************************/
+/*=======================================================================================
+=============================   The Foundation Of Function   ============================ 
+=========================================================================================*/
 
 
-//short delay function
-void Delay(void) {
- volatile u32 Local_u32Count=0;
- for( Local_u32Count; Local_u32Count<12000U ; Local_u32Count++);
-                
-}
-/*********************************************************** END_ FUNCTION   ***********************************************************/
+/*============= INCLUDE LIB ==============*/
+	 #include "STD_TYPE.h"
+	 #include "BIT_MATH.h"
+         #include "TM4C123GH6PM.h"
+/*========================================*/	 
 
-/*********************************************************** Start_FUNCTION  ***********************************************************/
+/*============= INCLUDE MCAL ==============*/
+	#include "LCD_private.h"
+	#include "LCD_interface.h"
+	#include "LCD_config.h"
+        #include "Delay_interface.h"
+
+/*========================================*/	
+
+/*============= INCLUDE HAL ==============*/ 
+			
+
+/*========================================*/
+
+
+
+
+
+/*======================================================== Start_FUNCTION  ========================================================*/
 /*
-this function will initate the LCD it initializes 
-the portA5-6-7 as the control pins  for the LCD and portB0-7 
-as the data pins
+*                        Function Send Command To LCD  
 */
-void LCD_voidInitPins(void)
+void HLCD_vSendCommand(u8 copy_u8Command)
 {
-  /*for the LCD and portB0-7 as the data pins*/
+      /*===  Rs and RW  ===*/
+ LCD_PORT->DATA &=~((1U<<RS)|(1U<<RW)); 
+      /*===  Enable pulse  ===*/
+ LCD_PORT->DATA |= (1U<<EN); 
+ Delay_vUsIn16MHz(0);
+        /*===  Sending upper nibble  ===*/
+  LCD_PORT->DATA = (LCD_PORT->DATA & 0x0F) | (copy_u8Command & 0xF0);
+  LCD_PORT->DATA = 0;
+      /*===  Enable pulse  ===*/
+  LCD_PORT->DATA |= (1U<<EN);
+  Delay_vUsIn16MHz(0);
+  /*===  Sending lower nibble  ===*/
+  LCD_PORT->DATA = (LCD_PORT->DATA & 0x0F) | ((copy_u8Command & 0x0F) << 4);
+  LCD_PORT->DATA = 0;
+  if (copy_u8Command < 4)
+    Delay_vMsIn16MHz(2); 
+  else
+  Delay_vUsIn16MHz(40);
   
-  /*Enable and provide a clock to GPIO Port B in Run mode.*/
-  SYSCTL ->RCGCGPIO |=(1U<<2) ;
-  /* Delay*/
-   Delay() ;
-  /*disable alternative functions for portB*/
-  GPIOB->AFSEL &=~ 0XFF ;
-  /*disable analogue function*/
-   GPIOB->AMSEL &=~ 0XFF ;
-  /* regular digital pins */  
-   GPIOB->PCTL &=~ 0XFF ;
-  /*Set the direction of PB0-7 as ---> output*/
-   GPIOB ->DIR |=0XFF ;
-   /*Enable digital portB*/
-   GPIOB ->DEN |=0XFF ;
-
-   /*LCD it initializes the portA5-6-7 as the control pins*/
-   
-   /* Allow the clock for PA5,6,7*/
-    SYSCTL ->RCGCGPIO |=(1U<<1) ;
-    /* Delay*/
-    Delay();
-    /*disable alternative functions for PA5,6,7*/
-    GPIOA->AFSEL &=~0XE0 ;
-    /*disable analogue function for PA5,6,7*/
-    GPIOA->AMSEL &=~0XE0 ;
-    /* regular digital pins */  
-    GPIOA->PCTL &=~ 0XE0 ;
-    /*set the direction of PA5,6,7 as output*/
-     GPIOA->DIR |=0XE0;
-     /*enable digital PA5,6,7*/
-     GPIOA->DEN |=0XE0;
-    
 }
 
-/*********************************************************** END_ FUNCTION   ***********************************************************/
+/*======================================================== END_ FUNCTION   ========================================================*/
 
 
-/*********************************************************** Start_FUNCTION  ***********************************************************/
+/*======================================================== Start_FUNCTION  ========================================================*/
 /*
-  this function passes the command to the LCD
+*       Function To Display Char 
 */
-void LCD_voidSendCommand(unsigned long cmd)
+void HLCD_vDisplayCharacter(u8 data)
 {
-  /* set PB7-0 as the passed command to the function */
-  GPIOB->DATA |= cmd ;
-  /* set PA7 register select pin to low*/
-  LCD_RS = 0x00; 
-  /* set PA5 r/w pin to low*/
-    LCD_RW = 0x00;
-  /*set enable pin to high*/
-  LCD_EN = 0x40 ;
-  /* short delay */
-   Delay();
-  /* set enable pin to low  */
-  LCD_EN = 0x00;
+    /*===  RS  ===*/
+  LCD_PORT->DATA |= (1U<<RS); 
+    /*===  RW  ===*/
+  LCD_PORT->DATA &=~ (1U<<RW);
+   Delay_vMsIn16MHz(1);
+    /*===  Enable pulse  ===*/
+  LCD_PORT->DATA |= (1U<<EN); 
+  Delay_vMsIn16MHz(1);
+  /*===  Sending upper nibble  ===*/
+  LCD_PORT->DATA = (LCD_PORT->DATA & 0x0F) | (data & 0xF0);	
+ Delay_vMsIn16MHz(1);
+    /*===  Enable pulse  ===*/
+  LCD_PORT->DATA &=~ (1U<<EN);
+  Delay_vMsIn16MHz(1);
+    /*===  Enable pulse  ===*/
+  LCD_PORT->DATA |= (1U<<EN);
+  Delay_vMsIn16MHz(1);	
+    /*=== Sending lower nibble  ===*/
+  LCD_PORT->DATA = (LCD_PORT->DATA & 0x0F) | ((data & 0x0F) << 4);
+  Delay_vMsIn16MHz(1);
+    /*===  Enable pulse  ===*/
+  LCD_PORT->DATA &=~ (1U<<EN);
+  Delay_vMsIn16MHz(1);	
   
 }
 
+/*======================================================== END_ FUNCTION   ========================================================*/
 
-/*********************************************************** END_ FUNCTION   ***********************************************************/
 
-
-/*********************************************************** Start_FUNCTION  ***********************************************************/
-
-void LCD_voidSendData(char data)
+/*======================================================== Start_FUNCTION  ========================================================*/
+/*
+*        Function To Initiate LCD Before Init Function :
+*                                               - Clock EN to GPIOx 
+*                                               - Set PORTB pins as output      
+*                                               - Set PORTB pins as Digital
+*/
+void HLCD_vInit(void)
 {
-  /* write the data to PB7-0 */
-   GPIOB->DATA |= data ;
-  /* set PA7 to high*/
-   LCD_RS = 0x00; 
-  /* set pA5 to low*/
-    LCD_RW = 0x00;
-  /*set the enable pin high*/
-    LCD_EN = 0x40 ;
-  /* short delay */
-   Delay();
-  /* set enable pin to low  */
-   LCD_EN = 0x00;
- 
-}
+  /*===  Clock EN to GPIOB  ===*/
+  SYSCTL->RCGCGPIO |= 0x02; 
 
-
-/*********************************************************** END_ FUNCTION   ***********************************************************/
-
-/*********************************************************** Start_FUNCTION  ***********************************************************/
-
-
-void LCD_String(char *str)
-{
+  /*===  Set PORTB pins as output  ===*/
+  LCD_PORT->DIR = 0xFF; 
   
-  int i;
-	for(i=0;str[i]!=0;i++)		/* Send each char of string till the NULL */
+ /*===  Set PORTB pins as Digital  ===*/
+  LCD_PORT->DEN = 0xFF; 
+
+ /*============================================================================
+   *                     Initialization Sequence                            *
+ ============================================================================*/
+  
+  /*=== Step 1.   Power on, then delay > 100 ms ===*/
+  Delay_vMsIn16MHz(120); 
+  /*===  Step 2.   Instruction 0011b (3h), then delay > 4.1 ms ===*/
+  HLCD_vSendCommand(0x30);
+  Delay_vMsIn16MHz(5);
+  /*===  Step 3.   Instruction 0011b (3h), then delay > 100 us ===*/
+  HLCD_vSendCommand(0x30);
+  Delay_vUsIn16MHz(105);
+  /*===  Step 4.   Instruction 0011b (3h), then delay > 100 us ===*/
+ HLCD_vSendCommand(0x30);
+ Delay_vUsIn16MHz(105);
+  /*=== Step 5.   Instruction 0010b (2h), then delay > 100 us ===*/
+  HLCD_vSendCommand(0x20);
+  Delay_vUsIn16MHz(105); 
+  /*===  Step 6.   Instruction 0010b (2h), then 1000b (8h), then delay > 53 us or check BF (4-bit data, 2-line) ===*/
+  HLCD_vSendCommand(0x28); 
+  /*===  Step 7.   Instruction 0000b (0h), then 1000b (8h) then delay > 53 us or check BF ===*/
+  /*===  Step 8.   Instruction 0000b (0h), then 0001b (1h) then delay > 3 ms or check BF ===*/
+  /*===  Step 9.   Instruction 0000b (0h), then 0110b (6h), then delay > 53 us or check BF ===*/
+  HLCD_vSendCommand(0x06); 
+  /*===  Clear screen  ===*/
+  HLCD_vSendCommand(0x01);
+  /*===  Turn on display and Blink cursor ===*/
+  HLCD_vSendCommand(0x0F);
+}
+
+/*======================================================== END_ FUNCTION   ========================================================*/
+
+
+/*======================================================== Start_FUNCTION  ========================================================*/
+/*
+*  Function To Display String 
+*/
+void HLCD_vDisplayString(const s8 *Str)
+{
+  volatile u8 u8Local_Count1 = 0 ; 
+	while(Str[u8Local_Count1] != '\0')
 	{
-		LCD_voidSendData (str[i]);
+		HLCD_vDisplayCharacter(Str[u8Local_Count1]);
+		u8Local_Count1++;
 	}
+  
 }
 
-/*********************************************************** END_ FUNCTION   ***********************************************************/
+/*======================================================== END_ FUNCTION   ========================================================*/
 
 
 
-
-
-void LCD_String_xy (char row, char pos, char *str)	/* Send string to LCD with xy position */
+/*======================================================== Start_FUNCTION  ========================================================*/
+/*
+*       Function Display Char In Spacifice Place
+*/
+void HLCD_vGoToRowColumn(u8 row,u8 col)
 {
-	if (row == 0 && pos<16)
-	LCD_voidSendCommand((pos & 0x0F)|0x80);	/* Command of first row and required position<16 */
-	else if (row == 1 && pos<16)
-	LCD_voidSendCommand((pos & 0x0F)|0xC0);	/* Command of first row and required position<16 */
-	LCD_String(str);		/* Call LCD string function */
-}
-
-
-
-
-void LCD_Clear()
-{
-	LCD_voidSendCommand(0x01);		/* Clear display */
-	/* short delay */
-        Delay();
-	LCD_voidSendCommand(0x80);		/* Cursor at home position */
-}
-
-
-
-void LCD_Custom_Char(unsigned char loc, unsigned char *msg)
-{
-	unsigned char i;
-	if(loc<8)
+  unsigned char Address;
+	
+	/*===  first of all calculate the required address ===*/
+	switch(row)
 	{
-		LCD_voidSendCommand(0x40 + (loc*8));	/* Command 0x40 and onwards forces the device to point CGRAM address */
-		for(i=0;i<8;i++)	/* Write 8 byte for generation of 1 character */
-		LCD_voidSendData(msg[i]);
-	}
+		case 0:
+				Address=col;
+				break;
+		case 1:
+				Address=col+0x40;
+				break;
+	}					
+	/*===  to write to a specific address in the LCD ===*/ 
+	/*===  we need to apply the corresponding command 0b10000000|Address  ===*/
+	HLCD_vSendCommand(Address | SET_CURSOR_LOCATION); 
 }
 
+/*======================================================== END_ FUNCTION   ========================================================*/
 
 
+/*======================================================== Start_FUNCTION  ========================================================*/
+/*
+*        Function Display String In Spacifice Place
+*/
+void HLCD_vDisplayStringRowColumn(u8 row,u8 col,const s8 *Str)
+{
+        /*===  Go to to the required LCD position ===*/
+	HLCD_vGoToRowColumn(row,col); 
+         /*===  Display the string ===*/
+	HLCD_vDisplayString(Str);
+  
+}
 
+/*======================================================== END_ FUNCTION   ========================================================*/
 
-
-
-
-
+/*======================================================== Start_FUNCTION  ========================================================*/
+/*
+*               Function To Clear LCD
+*/
+void HLCD_vClear(void)
+{     
+       /*===  Clear display ===*/
+	HLCD_vSendCommand(0x01);		
+	 Delay_vMsIn16MHz(2);
+       /*===  Cursor at home position ===*/
+	HLCD_vSendCommand(SET_CURSOR_LOCATION);		
+}
+/*======================================================== END_ FUNCTION   ========================================================*/
