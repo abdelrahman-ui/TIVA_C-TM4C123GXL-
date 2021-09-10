@@ -43,6 +43,11 @@ Ideal_State                                                                     
 #define UART_INTERFACE_H
 
 #include "STD_TYPE.h"
+#include "UART_private.h"
+
+
+
+
   /* ========== Function To Initiate UART ( Baudrate And CPU Frequancy )  ========== */
 void UART_voidInit(u32 copy_u32BaudRate,u32 copy_u32F_CPU );
 

@@ -1,0 +1,337 @@
+###############################################################################
+#
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                10/Sep/2021  07:46:34
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Exe\RTOS.out
+#    Map file     =  
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\List\RTOS.map
+#    Command line =  
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Obj\cstartup_M.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Obj\heap_2.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Obj\list.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Obj\main.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Obj\port.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Obj\portasm.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Obj\queue.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Obj\tasks.o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Obj\uart.o
+#        -o
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Exe\RTOS.out
+#        --map
+#        H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\List\RTOS.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\config\linker\TexasInstruments\TM4C123GE6.icf" --semihosting
+#        --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__Heap_Handler  = DLMalloc
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0001ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20007fff] { rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A0":                                       0x40
+  .intvec            const    0x00000000    0x40  cstartup_M.o [1]
+                            - 0x00000040    0x40
+
+"P1":                                      0xf6a
+  .text              ro code  0x00000040   0x608  tasks.o [1]
+  .text              ro code  0x00000648   0x130  heap_2.o [1]
+  .text              ro code  0x00000778    0x98  list.o [1]
+  .text              ro code  0x00000810    0xcc  port.o [1]
+  CODE               ro code  0x000008dc    0xa8  portasm.o [1]
+  .text              ro code  0x00000984   0x16c  DblSub.o [4]
+  .text              ro code  0x00000af0   0x118  uart.o [1]
+  .text              ro code  0x00000c08    0x4e  FltToDbl.o [4]
+  .rodata            const    0x00000c56     0x2  heap_2.o [1]
+  .text              ro code  0x00000c58    0xe8  DblAdd.o [4]
+  .text              ro code  0x00000d40    0x2c  DblToI32.o [4]
+  .text              ro code  0x00000d6c    0xa0  main.o [1]
+  .text              ro code  0x00000e0c    0x40  zero_init3.o [5]
+  .text              ro code  0x00000e4c    0x2c  copy_init3.o [5]
+  .text              ro code  0x00000e78    0x28  data_init.o [5]
+  .text              ro code  0x00000ea0    0x22  fpinit_M.o [4]
+  .iar.init_table    const    0x00000ec4    0x24  - Linker created -
+  .text              ro code  0x00000ee8     0x2  cstartup_M.o [1]
+  .rodata            const    0x00000eec    0x1c  main.o [1]
+  .rodata            const    0x00000f08    0x1c  main.o [1]
+  .text              ro code  0x00000f24    0x1a  cmain.o [5]
+  .text              ro code  0x00000f3e     0x4  low_level_init.o [3]
+  .text              ro code  0x00000f42     0x4  exit.o [3]
+  .text              ro code  0x00000f46     0x2  cstartup_M.o [1]
+  .text              ro code  0x00000f48     0xa  cexit.o [5]
+  .text              ro code  0x00000f52     0x2  cstartup_M.o [1]
+  .text              ro code  0x00000f54    0x14  exit.o [6]
+  .text              ro code  0x00000f68    0x10  cstartup_M.o [1]
+  Initializer bytes  const    0x00000f78    0x10  <for P2-1>
+  .rodata            const    0x00000f88     0x8  main.o [1]
+  .rodata            const    0x00000f90     0x8  main.o [1]
+  .rodata            const    0x00000f98     0x8  tasks.o [1]
+  .text              ro code  0x00000fa0     0x2  cstartup_M.o [1]
+  .text              ro code  0x00000fa2     0x2  cstartup_M.o [1]
+  .text              ro code  0x00000fa4     0x2  cstartup_M.o [1]
+  .text              ro code  0x00000fa6     0x2  cstartup_M.o [1]
+  .text              ro code  0x00000fa8     0x2  cstartup_M.o [1]
+  .rodata            const    0x00000faa     0x0  zero_init3.o [5]
+  .rodata            const    0x00000faa     0x0  copy_init3.o [5]
+                            - 0x00000faa   0xf6a
+
+"P2", part 1 of 3:                          0x10
+  P2-1                        0x20000000    0x10  <Init block>
+    .data            inited   0x20000000     0x4  heap_2.o [1]
+    .data            inited   0x20000004     0x4  main.o [1]
+    .data            inited   0x20000008     0x4  main.o [1]
+    .data            inited   0x2000000c     0x4  port.o [1]
+                            - 0x20000010    0x10
+
+"P2", part 2 of 3:                        0x1000
+  CSTACK                      0x20000010  0x1000  <Block>
+    CSTACK           uninit   0x20000010  0x1000  <Block tail>
+                            - 0x20001010  0x1000
+
+"P2", part 3 of 3:                         0x8ec
+  .bss               zero     0x20001010   0x800  heap_2.o [1]
+  .bss               zero     0x20001810    0x64  tasks.o [1]
+  .bss               zero     0x20001874    0x14  tasks.o [1]
+  .bss               zero     0x20001888    0x14  tasks.o [1]
+  .bss               zero     0x2000189c    0x14  tasks.o [1]
+  .bss               zero     0x200018b0     0x8  heap_2.o [1]
+  .bss               zero     0x200018b8     0x8  heap_2.o [1]
+  .bss               zero     0x200018c0     0x4  heap_2.o [1]
+  .bss               zero     0x200018c4     0x4  tasks.o [1]
+  .bss               zero     0x200018c8     0x4  tasks.o [1]
+  .bss               zero     0x200018cc     0x4  tasks.o [1]
+  .bss               zero     0x200018d0     0x4  tasks.o [1]
+  .bss               zero     0x200018d4     0x4  tasks.o [1]
+  .bss               zero     0x200018d8     0x4  tasks.o [1]
+  .bss               zero     0x200018dc     0x4  tasks.o [1]
+  .bss               zero     0x200018e0     0x4  tasks.o [1]
+  .bss               zero     0x200018e4     0x4  tasks.o [1]
+  .bss               zero     0x200018e8     0x4  tasks.o [1]
+  .bss               zero     0x200018ec     0x4  tasks.o [1]
+  .bss               zero     0x200018f0     0x4  tasks.o [1]
+  .bss               zero     0x200018f4     0x4  tasks.o [1]
+  .bss               zero     0x200018f8     0x4  tasks.o [1]
+                            - 0x200018fc   0x8ec
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x8ec:
+          0x20001010  0x8ec
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x10:
+          0x00000f78   0x10
+    1 destination range, total size 0x10:
+          0x20000000   0x10
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Obj: [1]
+    cstartup_M.o           32       64
+    heap_2.o              304        6    2 072
+    list.o                152
+    main.o                160       80        8
+    port.o                204        4        4
+    portasm.o             168
+    tasks.o             1 544        8      216
+    uart.o                280
+    -------------------------------------------
+    Total:              2 844      162    2 300
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+m7M_tls.a: [4]
+    DblAdd.o              232
+    DblSub.o              364
+    DblToI32.o             44
+    FltToDbl.o             78
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                752
+
+rt7M_tl.a: [5]
+    cexit.o                10
+    cmain.o                26
+    copy_init3.o           44
+    data_init.o            40
+    zero_init3.o           64
+    -------------------------------------------
+    Total:                184
+
+shb_l.a: [6]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                             4
+    Linker created                  36    4 096
+-----------------------------------------------
+    Grand Total:        3 808      202    6 396
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x00000ec4          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00000ee8          --   Gb  - Linker created -
+?main                   0x00000f25         Code  Gb  cmain.o [5]
+BusFault_Handler        0x00000fa1    0x2  Code  Wk  cstartup_M.o [1]
+CSTACK$$Base            0x20000010          --   Gb  - Linker created -
+CSTACK$$Limit           0x20001010          --   Gb  - Linker created -
+DebugMon_Handler        0x00000fa5    0x2  Code  Wk  cstartup_M.o [1]
+HardFault_Handler       0x00000f47    0x2  Code  Wk  cstartup_M.o [1]
+MemManage_Handler       0x00000f53    0x2  Code  Wk  cstartup_M.o [1]
+NMI_Handler             0x00000ee9    0x2  Code  Wk  cstartup_M.o [1]
+Region$$Table$$Base     0x00000ec4          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000ee8          --   Gb  - Linker created -
+UART_Write              0x00000ba9   0x10  Code  Gb  uart.o [1]
+UsageFault_Handler      0x00000fa3    0x2  Code  Wk  cstartup_M.o [1]
+__aeabi_d2uiz           0x00000d41         Code  Gb  DblToI32.o [4]
+__aeabi_dadd            0x00000c59         Code  Gb  DblAdd.o [4]
+__aeabi_f2d             0x00000c09         Code  Gb  FltToDbl.o [4]
+__cmain                 0x00000f25         Code  Gb  cmain.o [5]
+__exit                  0x00000f55   0x14  Code  Gb  exit.o [6]
+__iar_copy_init3        0x00000e4d   0x2c  Code  Gb  copy_init3.o [5]
+__iar_d2uiz             0x00000d4d         Code  Gb  DblToI32.o [4]
+__iar_dadd              0x00000c6d         Code  Gb  DblAdd.o [4]
+__iar_data_init3        0x00000e79   0x28  Code  Gb  data_init.o [5]
+__iar_dsub              0x00000985         Code  Gb  DblSub.o [4]
+__iar_dsubStart         0x00000997         Code  Gb  DblSub.o [4]
+__iar_init_vfp          0x00000ea1         Code  Gb  fpinit_M.o [4]
+__iar_program_start     0x00000f69   0x10  Code  Gb  cstartup_M.o [1]
+__iar_zero_init3        0x00000e0d   0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x00000f3f    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000   0x40  Data  Gb  cstartup_M.o [1]
+_call_main              0x00000f31         Code  Gb  cmain.o [5]
+_exit                   0x00000f49         Code  Gb  cexit.o [5]
+_main                   0x00000f3b         Code  Gb  cmain.o [5]
+exit                    0x00000f43    0x4  Code  Gb  exit.o [3]
+heapSTRUCT_SIZE         0x00000c56    0x2  Data  Lc  heap_2.o [1]
+main                    0x00000d6d   0x44  Code  Gb  main.o [1]
+pcTextForTask1          0x20000004    0x4  Data  Lc  main.o [1]
+pcTextForTask2          0x20000008    0x4  Data  Lc  main.o [1]
+prvAddCurrentTaskToDelayedList
+                        0x00000591   0x66  Code  Lc  tasks.o [1]
+prvAddNewTaskToReadyList
+                        0x00000139   0xb8  Code  Lc  tasks.o [1]
+prvCheckTasksWaitingTermination
+                        0x00000563    0x2  Code  Lc  tasks.o [1]
+prvHeapInit             0x00000735   0x2a  Code  Lc  heap_2.o [1]
+prvIdleTask             0x000004f5   0x24  Code  Lc  tasks.o [1]
+prvInitialiseNewTask    0x000000b7   0x82  Code  Lc  tasks.o [1]
+prvInitialiseTaskLists  0x00000519   0x4a  Code  Lc  tasks.o [1]
+prvResetNextTaskUnblockTime
+                        0x00000565   0x2c  Code  Lc  tasks.o [1]
+prvTaskExitError        0x00000839   0x10  Code  Lc  port.o [1]
+pvPortMalloc            0x00000649   0xb0  Code  Gb  heap_2.o [1]
+pvPortMalloc::xHeapHasBeenInitialised
+                        0x200018c0    0x4  Data  Lc  heap_2.o [1]
+pxCurrentTCB            0x200018c4    0x4  Data  Gb  tasks.o [1]
+pxDelayedTaskList       0x200018c8    0x4  Data  Lc  tasks.o [1]
+pxOverflowDelayedTaskList
+                        0x200018cc    0x4  Data  Lc  tasks.o [1]
+pxPortInitialiseStack   0x00000811   0x28  Code  Gb  port.o [1]
+pxReadyTasksLists       0x20001810   0x64  Data  Lc  tasks.o [1]
+uart_init               0x00000af1   0xb8  Code  Gb  uart.o [1]
+uart_write_string       0x00000bb9   0x16  Code  Gb  uart.o [1]
+ucHeap                  0x20001010  0x800  Data  Lc  heap_2.o [1]
+uxCriticalNesting       0x2000000c    0x4  Data  Lc  port.o [1]
+uxCurrentNumberOfTasks  0x200018d0    0x4  Data  Lc  tasks.o [1]
+uxListRemove            0x000007eb   0x26  Code  Gb  list.o [1]
+uxPendedTicks           0x200018e0    0x4  Data  Lc  tasks.o [1]
+uxSchedulerSuspended    0x200018f8    0x4  Data  Lc  tasks.o [1]
+uxTaskNumber            0x200018ec    0x4  Data  Lc  tasks.o [1]
+uxTopReadyPriority      0x200018d8    0x4  Data  Lc  tasks.o [1]
+vListInitialise         0x00000779   0x1e  Code  Gb  list.o [1]
+vListInitialiseItem     0x00000797    0x6  Code  Gb  list.o [1]
+vListInsert             0x000007b5   0x36  Code  Gb  list.o [1]
+vListInsertEnd          0x0000079d   0x18  Code  Gb  list.o [1]
+vPendSVHandler          0x00000fa7    0x2  Code  Wk  cstartup_M.o [1]
+vPortEnableVFP          0x00000969         Code  Gb  portasm.o [1]
+vPortEnterCritical      0x00000885   0x1a  Code  Gb  port.o [1]
+vPortExitCritical       0x0000089f   0x1a  Code  Gb  port.o [1]
+vPortFree               0x000006f9   0x3c  Code  Gb  heap_2.o [1]
+vPortSVCHandler         0x00000935         Code  Gb  portasm.o [1]
+vPortSetupTimerInterrupt
+                        0x000008c5   0x18  Code  Wk  port.o [1]
+vPortStartFirstTask     0x00000951         Code  Gb  portasm.o [1]
+vPortSystickHandler     0x00000fa9    0x2  Code  Wk  cstartup_M.o [1]
+vTask                   0x00000dc5   0x48  Code  Gb  main.o [1]
+vTaskDelayUntil         0x000001f1   0x60  Code  Gb  tasks.o [1]
+vTaskStartScheduler     0x00000251   0x50  Code  Gb  tasks.o [1]
+vTaskSuspendAll         0x000002a1   0x10  Code  Gb  tasks.o [1]
+vTaskSwitchContext      0x0000049f   0x56  Code  Gb  tasks.o [1]
+xDelayedTaskList1       0x20001874   0x14  Data  Lc  tasks.o [1]
+xDelayedTaskList2       0x20001888   0x14  Data  Lc  tasks.o [1]
+xEnd                    0x200018b8    0x8  Data  Lc  heap_2.o [1]
+xFreeBytesRemaining     0x20000000    0x4  Data  Lc  heap_2.o [1]
+xIdleTaskHandle         0x200018f4    0x4  Data  Lc  tasks.o [1]
+xNextTaskUnblockTime    0x200018f0    0x4  Data  Lc  tasks.o [1]
+xNumOfOverflows         0x200018e8    0x4  Data  Lc  tasks.o [1]
+xPendingReadyList       0x2000189c   0x14  Data  Lc  tasks.o [1]
+xPortPendSVHandler      0x000008dd         Code  Gb  portasm.o [1]
+xPortStartScheduler     0x00000849   0x3c  Code  Gb  port.o [1]
+xSchedulerRunning       0x200018dc    0x4  Data  Lc  tasks.o [1]
+xStart                  0x200018b0    0x8  Data  Lc  heap_2.o [1]
+xTaskCreate             0x00000041   0x76  Code  Gb  tasks.o [1]
+xTaskGetTickCount       0x00000391    0x8  Code  Gb  tasks.o [1]
+xTaskIncrementTick      0x00000399  0x106  Code  Gb  tasks.o [1]
+xTaskResumeAll          0x000002b1   0xe0  Code  Gb  tasks.o [1]
+xTickCount              0x200018d4    0x4  Data  Lc  tasks.o [1]
+xYieldPending           0x200018e4    0x4  Data  Lc  tasks.o [1]
+
+
+[1] = H:\Embedded_Abdelrahman_Magdy\01_ARM\06_Mina\TIVA_C-TM4C123GXL-\07_FreeRtos\02_RTOS\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  3 808 bytes of readonly  code memory
+    202 bytes of readonly  data memory
+  6 396 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

@@ -66,6 +66,11 @@ typedef struct {                                    /*!< UART0 Structure        
   volatile u32  CC;                                /*!< UART Clock Configuration             */
 } UART0_Type;
 
+/* ================================================================================ */
+/*              GLOBAL VARIABLES :  Pointer To struct of UART0_Type                 */
+/* ================================================================================ */
+
+UART0_Type* SUART_ptr ;   
 
 
 /* ================================================================================ */
@@ -95,6 +100,20 @@ typedef struct {                                    /*!< UART0 Structure        
 #define UART5                           ((UART0_Type              *) UART5_BASE)
 #define UART6                           ((UART0_Type              *) UART6_BASE)
 #define UART7                           ((UART0_Type              *) UART7_BASE)
+
+/* ================================================================================ */
+/* ================       UARTx Select From 0 To 7                 ================ */
+/* ================================================================================ */
+typedef enum{
+	UART_0=0,
+	UART_1,
+	UART_2,
+	UART_3,
+	UART_4,
+	UART_5,
+	UART_6,
+	UART_7
+}UART_SEL_t;
 
 
 
