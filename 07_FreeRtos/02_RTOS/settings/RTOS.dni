@@ -64,10 +64,6 @@ LMIFTDIserialNo=0E20FE11
 LMIFTDIfoundProbes=
 LMI_ResetMode=0x00000000
 LMI_LeaveTargetRunning=0x00000000
-[Disassemble mode]
-mode=0
-[Breakpoints]
-Count=0
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -75,6 +71,10 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
+[Disassemble mode]
+mode=0
+[Breakpoints]
+Count=0
 [Aliases]
 A0=_ "C:\Users\merye\Documents\Keil_workspace\01_TIVA_C\05_Free_RTOS\cstartup_M.c" ""
 A1=_ "C:\Users\merye\Documents\Keil_workspace\01_TIVA_C\05_Free_RTOS\tasks.c" ""

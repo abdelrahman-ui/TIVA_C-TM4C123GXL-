@@ -44,26 +44,42 @@ Ideal_State                                                                     
 
 #include "STD_TYPE.h"
 #include "UART_private.h"
+#include "UART_config.h"
 
 
 
+
+  /* ========== Function To Enable UARTx  ========== */
+void MUART_vEnable(u8 copy_u8UartNum);
 
   /* ========== Function To Initiate UART ( Baudrate And CPU Frequancy )  ========== */
-void UART_voidInit(u32 copy_u32BaudRate,u32 copy_u32F_CPU );
+void MUART_vInit(u8 copy_u8UartNum ,u32 copy_u32BR ,u32 copy_u32F_CPU );
+
+  /* ========== Function To Config UART   ========== */
+void MUART_vConfig(u8 copy_u8UartNum , DATA_SIZE_t DATA_SIZE , PARITY_t PARITY , STOP_BIT_t STOP_BIT_NUM ,FIFO_STATE_t FIFO_STATE  );
+
+/* ========== Function To Config PARITY   ========== */
+void MUART_vParityConfig(u8 copy_u8UartNum  ,PARITY_CONFIG_t PARITY_CONFIG);
 
   /* ========== Function To Send Char  ========== */
-void UART_voidWrite(u8 copy_u8Char);
+void MUART_vWrite(u8 copy_u8Char);
 
   /* ========== Function To Send String  ========== */
-void UART_voidWriteString(u8 const * string);
+void MUART_vWriteString(u8 const * string);
 
   /* ========== Function To Write   ========== */
-void UART_voidWriteInt(u32 copy_u32Number);
+void MUART_vWriteInt(u32 copy_u32Number);
 
   /* ========== Function To Read From Rx  ========== */
-u8 UART_u8Read(void);
+u8 MUART_u8Read(void);
 
 
+  /* ========== Function To Select UARTx Base Address  ========== */
+UARTx_t* MUART_SptrSelect(u8 copy_u8UartNum);
+
+  /* ========== Function To Disable UARTx  ========== */
+void MUART_vDisable(u8 copy_u8UartNum);
+   
 
 
 

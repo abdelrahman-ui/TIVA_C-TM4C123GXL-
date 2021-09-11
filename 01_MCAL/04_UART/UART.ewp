@@ -38,7 +38,7 @@
         </option>
         <option>
           <name>Input description</name>
-          <state></state>
+          <state>Full formatting.</state>
         </option>
         <option>
           <name>Output variant</name>
@@ -47,7 +47,7 @@
         </option>
         <option>
           <name>Output description</name>
-          <state></state>
+          <state>Full formatting.</state>
         </option>
         <option>
           <name>GOutputBinary</name>
@@ -55,7 +55,7 @@
         </option>
         <option>
           <name>OGCoreOrChip</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>GRuntimeLibSelect</name>
@@ -69,7 +69,7 @@
         </option>
         <option>
           <name>RTDescription</name>
-          <state></state>
+          <state>Use the normal configuration of the C/C++ runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod.</state>
         </option>
         <option>
           <name>OGProductVersion</name>
@@ -89,7 +89,7 @@
         </option>
         <option>
           <name>OGChipSelectEditMenu</name>
-          <state>Default	None</state>
+          <state>TM4C123GH6PM	TexasInstruments TM4C123GH6PM</state>
         </option>
         <option>
           <name>GenLowLevelInterface</name>
@@ -128,11 +128,11 @@
         <option>
           <name>GBECoreSlave</name>
           <version>24</version>
-          <state>38</state>
+          <state>39</state>
         </option>
         <option>
           <name>OGUseCmsis</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>OGUseCmsisDspLib</name>
@@ -145,21 +145,21 @@
         <option>
           <name>CoreVariant</name>
           <version>24</version>
-          <state>38</state>
+          <state>39</state>
         </option>
         <option>
           <name>GFPUDeviceSlave</name>
-          <state>Default	None</state>
+          <state>TM4C123GH6PM	TexasInstruments TM4C123GH6PM</state>
         </option>
         <option>
           <name>FPU2</name>
           <version>0</version>
-          <state>0</state>
+          <state>4</state>
         </option>
         <option>
           <name>NrRegs</name>
           <version>0</version>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>NEON</name>
@@ -168,7 +168,7 @@
         <option>
           <name>GFPUCoreSlave2</name>
           <version>24</version>
-          <state>38</state>
+          <state>39</state>
         </option>
       </data>
     </settings>
@@ -1927,6 +1927,9 @@
     </file>
     <file>
       <name>$PROJ_DIR$\STD_TYPE.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\TM4C123GH6PM.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\UART_config.h</name>
