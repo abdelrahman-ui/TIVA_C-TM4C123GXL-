@@ -29,8 +29,8 @@
 #define  UARTx          2      // UART2
 #define  GPIO_PORT      3     // GPIOD
 #define  GPIOx          GPIOD 
-#define  PIN_Tx         7      
-#define  PIN_Rx         6
+#define  PIN_Tx         7U      
+#define  PIN_Rx         6U
 #define  BaudRate       9600    
 #define  F_CP           16000000UL
 #define  CLK_Config     CLK_Source

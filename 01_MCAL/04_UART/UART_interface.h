@@ -46,7 +46,7 @@ Ideal_State                                                                     
 #include "UART_private.h"
 #include "UART_config.h"
 
-
+#include "UART_program.c"
 
 
   /* ========== Function To Enable UARTx  ========== */
