@@ -12,7 +12,7 @@
 /*=======================================================================================
 
             * Configration Type :
-                                  - Prebuilt Config	:	NO
+                                  - Prebuilt Config	    :	NO
                                   - Link Time Config	:	NO
                                   - Post Build Config	:	NO
 

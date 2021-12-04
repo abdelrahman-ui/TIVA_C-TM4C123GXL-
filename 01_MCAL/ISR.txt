@@ -1,0 +1,50 @@
+*) Some thing cut my backgroung loop while(1) 
+*) Only 1 pin when it have pulse ya processor there is intterput .
+*) Type : (External & Internal ) of processor but poth in micro
+	*) External : uart , adc , timer , .......
+	*) Internal : 	
+			*)Core peripheral : ( rcc , systick  , ... ),*)
+			*)Trap  :( Mistake like div 5/0 , Wrong opcode ,stack oversflow )
+			*) SWI  : Software int when processor find instruction swi prossecor make INT .
+
+*) With intterput processor jump to ISR .
+
+*) Function call vs SWI :
+
+
+*) 1 pin for intterput how all peripheral on the same pin  --> By connect all pif in PIC : Programmable intterput controller .
+*) Every peripheral have (PIEx) : that for enable perpheral intterput i can Enable or disable intterput go to out or not flag will raise but pic will not feel .
+*) GIE : That global intterput enable PIC Will never feel any flag from any peipheral . 
+*) NMI : nonmaskable intterput never can control it like resat . 
+*)   how processor know how have interput ? ( Vector table , Flexiable prority system )
+	*) To know how make intterput :
+				1) Vector table const location  : pic before extern flag svae number for peripheral 
+				2) processor read PIC .
+				3) Processor have Vectortable have same location of pic so processor jump to vector table to location which read .
+				4) here processor will find address of ISR for the spasific perpheral intterput . 
+*) what will happen if many peripheral out intterput in same time ?
+--> we have latch mem save intterput and out it by periority and here order of peripheral = peririty order of arrang hw .
+ 
+*) where vector table ? 
+
+*) who put isr location in vector ||?   
+
+*) The disadvantage of vector the prority only HW .
+
+*) Flexiable prority system : Here processor get intterput only no vetor table 
+--) here with any intterput jump for vector not vector table 
+--) here we have only one ISR Not for every peripheral ISR here only one ISR and as sw by if ( if INT get falg make code )
+--) here when 2 isr happend i same time the arrange of if condition here is the prority so i can control it not by hardware .
+--) but use if if if not if else .
+
+*) Vector table better at intterput latency but hw prority . AVR --> Vector table , Pic --> flexable 
+) ARM BOTH . 
+--------) we must clear flag to fell intterput 
+			*) by (HW , Write (0|1) , Read flag) 
+*)nesting : interput can cut anthor intterput .
+-> normal nesting : that intterput cut anthor one 
+-) Self nesting :  
+
+
+
+
