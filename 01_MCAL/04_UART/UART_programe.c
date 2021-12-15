@@ -97,6 +97,8 @@ void MUART_vEnable(u8 copy_u8UartNum)
 /*
 *  Function To Initiate UART ( Baudrate And CPU Frequancy 
 * DIV is value of REG ( Mantisa + fraction )
+* Fraction * 16 and close the rresulte to close num and put in fraction 
+* if fraction biger than matissa 's number put 1 in mantisa 
 */
 void MUART_vInit(u8 copy_u8UartNum ,u32 copy_u32BR ,u32 copy_u32F_CPU )
 {
