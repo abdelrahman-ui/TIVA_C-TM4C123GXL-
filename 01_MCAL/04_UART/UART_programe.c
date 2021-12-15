@@ -96,6 +96,7 @@ void MUART_vEnable(u8 copy_u8UartNum)
 /*======================================================== Start_FUNCTION  ========================================================*/
 /*
 *  Function To Initiate UART ( Baudrate And CPU Frequancy 
+* DIV is value of REG ( Mantisa + fraction )
 */
 void MUART_vInit(u8 copy_u8UartNum ,u32 copy_u32BR ,u32 copy_u32F_CPU )
 {
